@@ -13,7 +13,7 @@ switch ($action) {
 
     case 'afficherCumul':
 
-        $moisAnnee = $_REQUEST['moisAnnee'] ?? '';
+        $moisAnnee = $_REQUEST['moisAnnee'];
         
         $KM  = $pdo->getCumulFrais($moisAnnee, 'KM');
         $ETP = $pdo->getCumulFrais($moisAnnee, 'ETP');

@@ -145,7 +145,7 @@ class PdoGsb{
         $laLigne = $res->fetch();
         return $laLigne;
     }
-    
+
     public function getCumulFrais($moisAnnee, $type)
     {
         $req = "SELECT SUM(quantite) AS cumul FROM lignefraisforfait 
@@ -153,7 +153,7 @@ class PdoGsb{
         $res = PdoGsb::$monPdo->query($req);   
         $cumul = $res->fetch();        
         return $cumul['cumul'];
-    }
+    } 
     
 
 }

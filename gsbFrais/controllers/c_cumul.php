@@ -19,6 +19,8 @@ switch ($action) {
         $ETP = $pdo->getCumulFrais($moisAnnee, 'ETP');
         $REP = $pdo->getCumulFrais($moisAnnee, 'REP');
         $NUI = $pdo->getCumulFrais($moisAnnee, 'NUI');
+        $HAB = $pdo->getCumulFrais($moisAnnee, 'HAB');
+
         
         include("views/v_affichage_cumul.php"); 
         break;

@@ -24,6 +24,10 @@
             <td>Nuitée</td>
             <td><?php echo($NUI) ?></td>
         </tr>
+        <tr>
+            <td>Frais d'habillage</td>
+            <td><?php echo($HAB) ?></td>
+        </tr>
     </tbody>
 </table>
 

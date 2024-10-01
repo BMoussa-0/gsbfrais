@@ -156,21 +156,15 @@ class PdoGsb{
 
     public function getCumulFrais($moisAnnee, $type)
     {
-    // Prépare la requête SQL
-    $req = "SELECT SUM(quantite) AS cumul FROM lignefraisforfait 
-            WHERE idFraisForfait = :type AND mois = :moisAnnee";
-    
-    // Prépare et exécute la requête
-    $stmt = PdoGsb::$monPdo->prepare($req);
-    $stmt->bindParam(':type', $type, PDO::PARAM_STR);
-    $stmt->bindParam(':moisAnnee', $moisAnnee, PDO::PARAM_STR);
-    $stmt->execute();
-    
-    // Récupère le résultat
-    $res = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    // Retourne le cumul (ou 0 si aucun résultat n'est trouvé)
-    return $res['cumul'] ?? 0;
+        $req = "SELECT SUM(quantite) AS cumul FROM lignefraisforfait 
+                WHERE idFraisForfait = '$type' AND mois = '$moisAnnee'";
+        
+        $stmt = PdoGsb::$monPdo->query($req);
+        
+        $res = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        return $res['cumul'] ?? 0;
     }
+    
 
 }

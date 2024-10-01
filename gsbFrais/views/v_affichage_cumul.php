@@ -1,4 +1,4 @@
-<h2>Cumul des frais pour le mois : <?= htmlspecialchars($moisAnnee ?? '') ?></h2>
+<h2>Cumul des frais pour le mois : <?php echo($moisAnnee ?? '') ?></h2>
 
 <table border="1">
     <thead>
@@ -9,20 +9,20 @@
     </thead>
     <tbody>
         <tr>
-            <td>KM</td>
-            <td><?= htmlspecialchars($KM ?? '0') ?></td>
+            <td>Kilometres</td>
+            <td><?php echo($KM ?? '0') ?></td>
         </tr>
         <tr>
-            <td>ETP</td>
-            <td><?= htmlspecialchars($ETP ?? '0') ?></td>
+            <td>Etape</td>
+            <td><?php echo($ETP ?? '0') ?></td>
         </tr>
         <tr>
-            <td>REP</td>
-            <td><?= htmlspecialchars($REP ?? '0') ?></td>
+            <td>Repas midi</td>
+            <td><?php echo($REP ?? '0') ?></td>
         </tr>
         <tr>
-            <td>NUI</td>
-            <td><?= htmlspecialchars($NUI ?? '0') ?></td>
+            <td>Nuitée</td>
+            <td><?php echo($NUI ?? '0') ?></td>
         </tr>
     </tbody>
 </table>
